@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link href="/m/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="/m/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <link rel="shortcut icon" href="./favicon.ico">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>福利彩</title>
+    <link href="/m/Content/page/m/styles_m.css" rel="stylesheet" />
+    <link href="/m/Content/page/animate.min.css" rel="stylesheet" />
+    <link href="/m/Content/page/m/msgDiv.css?a=1" rel="stylesheet" />
+    <script src="/m/Scripts/jquery-1.8.0.js"></script>
+    <script src="/m/Scripts/page/jquery.SuperSlide.2.1.1.js"></script>
+    <style type="text/css">
+        .copyright {
+            color: #fff;
+            text-align: center;
+        }
+
+            .copyright a {
+                margin: 0 10px;
+                color: #fff;
+                font: 0.65rem/1.2rem '';
+            }
+
+            .snow {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    z-index: 200;
+    cursor: pointer
+}
+
+    .snow.snow-1 {
+        width: 90px;
+        height: 111px;
+        background: url(/m/Content/page/images/s-1.png)
+    }
+
+    .snow.snow-2 {
+        width: 80px;
+        height: 111px;
+        background: url(/m/Content/page/images/s-2.png)
+    }
+
+    .snow.snow-3 {
+        width: 100px;
+        height: 188px;
+        background: url(/m/Content/page/images/s-3.png)
+    }
+.rbag {
+    width: 15rem;
+    height: 15rem;
+    position: fixed;
+    z-index: 10001;
+    left: 50%;
+    top: 50%;
+    background: url(../images/rbag_bg.png) no-repeat 0 0;
+    margin-left: -7.5rem;
+    margin-top: -7.5rem;
+    background-size: 100% auto;
+}
+
+    .rbag .close {
+        width: 30px;
+        height: 30px;
+        background: url(../images/rbag_close.png) no-repeat 0 0;
+        display: block;
+        margin-left: 7.5rem;
+    }
+
+    .rbag .cont {
+        margin: 7.5rem 0 0 1.5rem;
+        text-align: center;
+    }
+
+    .rbag .btn {
+        width: 5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        font-size: 14px;
+        color: #000;
+        background: #fbdb30;
+        border-radius: 5px;
+        border: none;
+        margin-top: 0.6rem;
+        margin-left: -1rem;
+    }
+
+    .rbag .txt {
+        width: 9rem;
+        height: 1.5rem;
+        border: 1px solid #b05a5a;
+        background: #7d1919;
+        color: #fff;
+        margin: 0px 0 0 -1.4rem;
+        text-indent: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top_main">
+            <dl>
+                <dt>
+                    <img src="/m/Content/page/images/logo.png">
+                </dt>
+                <dd>
+                    <a href="http://cy688.vip/index" target="_blank" class="red">官网首页</a><a href="#">红包查询</a>
+                </dd>
+            </dl>
+
+        </div>
+
+    </div>
+
+
+    <div class="hongbao_djs">
+
+        <!-- 倒计时 -->
+
+        <div class="mod-redbag" id="hb_start" style="display: none">
+
+            <div id="CountMsg" class="HotDate">
+                <span class="tle">
+                    倒计时:
+                </span>
+                <span class="t_d" id="t_d"><em>00</em>天</span>
+                <span class="t_h" id="t_h"><em>00</em>时</span>
+                <span class="t_m" id="t_m"><em>00</em>分</span>
+                <span class="t_s" id="t_s"><em>00</em>秒</span>
+
+            </div>
+            <h2>
+                <span></span>
+            </h2>
+        </div>
+
+        <!-- 进行中 -->
+        <div class="mod-redbag" id="hb_for" style="display: none">
+            <div id="CountMsg" class="HotDate">
+                <span class="tle">
+                    进行中:
+                </span>
+                <span class="t_d" id="t_d_2"><em>00</em>天</span>
+                <span class="t_h" id="t_h_2"><em>00</em>时</span>
+                <span class="t_m" id="t_m_2"><em>00</em>分</span>
+                <span class="t_s" id="t_s_2"><em>00</em>秒</span>
+
+            </div>
+            <h2>
+                <span>
+                    <div class="search">
+                        <input type="text" name="username" id="username" value="" placeholder="请输入会员账号">
+                        <button data-key="packet" class="btn-search" type="button" name="button" id="packet"></button>
+                    </div>
+                </span>
+            </h2>
+        </div>
+
+        <!-- 下一波倒计时 -->
+        <div class="mod-redbag" id="hb_next" style="display: none">
+            <div id="CountMsg" class="HotDate">
+                <span class="tle">
+                    倒计时:
+                </span>
+                <span class="t_d" id="t_d_3"><em>00</em>天</span>
+                <span class="t_h" id="t_h_3"><em>00</em>时</span>
+                <span class="t_m" id="t_m_3"><em>00</em>分</span>
+                <span class="t_s" id="t_s_3"><em>00</em>秒</span>
+
+            </div>
+            <h2>
+                <span></span>
+            </h2>
+        </div>
+        <!-- 今日已结束 -->
+        <div id="today_end" style="display: none;" class="mod-redbag">
+            <div id="CountMsg" class="HotDate">
+                <span class="tle" style="font-weight: 700; font-size: .37rem; width: 4.8rem; color: #f6ff00;">
+                    抢红包活动今日已结束
+                </span>
+
+            </div>
+            <h2>
+                <span></span>
+            </h2>
+
+        </div>
+        <!-- 活动结束 -->
+        <div id="hb_end" class="mod-redbag">
+            <div id="CountMsg" class="HotDate">
+                <span class="tle" style="font-weight: 700; font-size: .37rem; width: 4.8rem; color: #f6ff00;">
+                    亿元抢红包活动已结束
+                </span>
+            </div>
+            <h2>
+                <span></span>
+            </h2>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="btn1">
+            <img src="/m/Content/page/images/m/btn1.jpg" width="100%" />
+        </div>
+
+        <div class="winners">
+            <div class="Decree marqueeStr2">
+                <div>
+                    <ul id="winners">
+                            <li>恭喜 qi***55 获得现金 74.68元</li>
+                            <li>恭喜 h6***6f 获得现金 74.80元</li>
+                            <li>恭喜 18***38 获得现金 75.52元</li>
+                            <li>恭喜 51***57 获得现金 75.96元</li>
+                            <li>恭喜 ab***dz 获得现金 79.75元</li>
+                            <li>恭喜 18***28 获得现金 79.78元</li>
+                            <li>恭喜 li***21 获得现金 79.95元</li>
+                            <li>恭喜 94***45 获得现金 80.12元</li>
+                            <li>恭喜 lt***71 获得现金 81.48元</li>
+                            <li>恭喜 17***09 获得现金 81.71元</li>
+                            <li>恭喜 58***24 获得现金 81.72元</li>
+                            <li>恭喜 40***25 获得现金 81.87元</li>
+                            <li>恭喜 7x***an 获得现金 81.90元</li>
+                            <li>恭喜 18***56 获得现金 82.02元</li>
+                            <li>恭喜 15***83 获得现金 82.05元</li>
+                            <li>恭喜 70***81 获得现金 82.13元</li>
+                            <li>恭喜 a1***46 获得现金 82.48元</li>
+                            <li>恭喜 zh***g3 获得现金 82.77元</li>
+                            <li>恭喜 zu***01 获得现金 82.82元</li>
+                            <li>恭喜 13***35 获得现金 82.96元</li>
+                            <li>恭喜 13***23 获得现金 83.91元</li>
+                            <li>恭喜 30***64 获得现金 84.31元</li>
+                            <li>恭喜 37***12 获得现金 84.52元</li>
+                            <li>恭喜 17***78 获得现金 84.55元</li>
+                            <li>恭喜 tl***14 获得现金 84.95元</li>
+                            <li>恭喜 13***16 获得现金 85.40元</li>
+                            <li>恭喜 wy***aq 获得现金 85.46元</li>
+                            <li>恭喜 yl***77 获得现金 1,015.04元</li>
+                            <li>恭喜 81***78 获得现金 1,016.35元</li>
+                            <li>恭喜 xy***67 获得现金 1,017.54元</li>
+                            <li>恭喜 ic***87 获得现金 1,019.18元</li>
+                            <li>恭喜 tt***26 获得现金 1,021.20元</li>
+                            <li>恭喜 an***34 获得现金 1,029.29元</li>
+                            <li>恭喜 19***09 获得现金 1,029.31元</li>
+                            <li>恭喜 13***45 获得现金 1,029.89元</li>
+                            <li>恭喜 19***23 获得现金 1,031.65元</li>
+                            <li>恭喜 18***66 获得现金 1,032.94元</li>
+                            <li>恭喜 ha***39 获得现金 2,254.04元</li>
+                            <li>恭喜 ac***71 获得现金 2,258.54元</li>
+                            <li>恭喜 13***68 获得现金 2,270.26元</li>
+                            <li>恭喜 w1***20 获得现金 2,277.49元</li>
+                            <li>恭喜 18***62 获得现金 2,294.15元</li>
+                            <li>恭喜 18***79 获得现金 2,303.46元</li>
+                            <li>恭喜 hz***86 获得现金 2,306.69元</li>
+                            <li>恭喜 bp***23 获得现金 2,317.04元</li>
+                            <li>恭喜 le***45 获得现金 2,341.60元</li>
+                            <li>恭喜 13***36 获得现金 2,352.98元</li>
+                            <li>恭喜 37***59 获得现金 5,560.46元</li>
+                            <li>恭喜 mo***11 获得现金 5,566.77元</li>
+                            <li>恭喜 we***78 获得现金 5,630.99元</li>
+                            <li>恭喜 27***64 获得现金 5,704.72元</li>
+                            <li>恭喜 wo***ou 获得现金 5,717.05元</li>
+                            <li>恭喜 ma***ce 获得现金 5,740.18元</li>
+                            <li>恭喜 go***hu 获得现金 6,010.09元</li>
+                            <li>恭喜 18***68 获得现金 6,101.84元</li>
+                            <li>恭喜 17***69 获得现金 6,116.76元</li>
+                            <li>恭喜 gu***45 获得现金 6,134.25元</li>
+                            <li>恭喜 13***39 获得现金 6,302.17元</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="active">
+            <h3>活动详情</h3>
+            <p class="p1">
+                公司抢红包活动全面开启,重磅福利,巨额来袭！以后每天都可以抢红包啦！您没有看错,是每天都可以抢！是不是很高兴？但是,我们会让您更高兴！所有红包,绝无空包！点击就有机会爆大奖,最高单包8888元！赶紧拨动您的金手指！暴击您的超级幸运吧！<br />
+                温馨提示：尚未注册/存款的亲们,强烈建议您注册/存款！红包点不停,惊喜等着您！更有其他优惠活动可以同时进行,如此给力的优惠,您还在等什么！赶紧加入福利彩进行游戏吧,在此祝您多多盈利！！！<br />
+                活动内容：每日总存款36元即可获得抢8888元红包资格,准备好您的邀请码分享好友一起抢。
+            </p>
+
+            <div class="Decree">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>存款总额 </th>
+                            <th>红包次数 </th>
+                            <th>最高现金红包 </th>
+                            <th>流水要求</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>36+</td>
+                            <td>1</td>
+                            <td rowspan="10">8888元</td>
+                            <td rowspan="10">一倍流水</td>
+                        </tr>
+                        <tr><td>500+</td><td>2</td></tr>
+                        <tr><td>1000+</td><td>3</td></tr>
+                        <tr><td>5000+</td><td>4</td></tr>
+                        <tr><td>10000+</td><td>5</td></tr>
+                        <tr><td>50000+</td><td>6</td></tr>
+                        <tr><td>100000+</td><td>7</td></tr>
+                        <tr><td>500000+</td><td>10</td></tr>
+                        <tr><td>1000000+</td><td>18</td></tr>
+                        <tr><td>5000000+</td><td>88</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="p1">
+                <span>注：会员必须达到指定的存款金额，方可参与抢红包活动,若没有达到要求,则无法抢红包次数！</span>
+            </p>
+
+            <div class="copyright">
+                <p>
+                    <a href="https://flc328.com/index" target="_blank">快速充值</a>
+                    | <a href="https://flc328.com/index" target="_blank">金管家</a>
+                    | <a href="https://flc329.com/activity" target="_blank">活动大厅</a>
+                    | <a href="https://39ca47c0edc0b.chatnow.mstatik.com/dist/standalone.html?eid=205783" target="_blank">在线客服</a>
+                </p>
+            </div>
+            <div class="footer">
+                Copyright 福利彩 Reserved
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <img src="/m/Content/page/images/m/foot.jpg" width="100%" />
+    </div>
+
+    <!-- 弹出 -->
+    <div id="msgDiv">
+        <div id="msgShut" class="i-close"></div>
+        <div id="msgDetail">
+            <div class="hd">
+                <h2>红包查询</h2>
+            </div>
+            <div class="bd">
+
+                <div class="search">
+                    <label>会员账号：</label>
+                    <input class="ipt" type="text" name="querycode" id="querycode" type="text" value="" placeholder="输入帐号">
+                    <button class="btn" type="button" onclick="queryBtn();">查询</button>
+                </div>
+
+                <table class="table3">
+                    <tr>
+                        <th>
+                            奖品名称
+                        </th>
+                        <th>
+                            领取时间
+                        </th>
+                        <th>
+                            是否派彩
+                        </th>
+
+                    </tr>
+                    <tbody id="query_content"></tbody>
+                </table>
+                <div class="quotes" style="padding: 10px 0px;"></div>
+
+            </div>
+        </div>
+    </div>
+    <div id="bgDiv"></div>
+    <!-- 弹出 -->
+    <!-- 红包雨点击后弹出 -->
+    <div class="rbag" id="j-logn" style="display: none;">
+        <a href="#" class="close" data-key="lognClose"></a>
+        <div class="cont">
+            <p>
+                <input class="txt" type="text" name="username2" id="username2"
+                       placeholder="请输入会员账号" value="">
+            </p>
+            <button class="btn" type="button" onclick="loginClick();"
+                    name="button2">
+                立即领取
+            </button>
+        </div>
+    </div>
+
+    <!-- 拆红包 -->
+    <div class="packet" id="j-packet">
+        <a class="packet-close" href="javascript:void(0)"></a>
+        <div class="packet-1">
+            <div class="packet-t">
+                <div class="pic">
+                    <img src="/m/Content/page/images/p-logo.png" alt="" />
+                </div>
+                <h3>福利彩</h3>
+                <div id="hb_count" class="num">
+                    您还有 <span>9997</span> 次机会
+                </div>
+            </div>
+            <div class="packet-copy">
+            </div>
+            <a class="packet-open" href="javascript:startGame();">拆红包</a>
+        </div>
+        <div class="packet-2">
+            <!-- animated flipInY -->
+            <div class="pannel">
+                <div class="pic">
+                    <img src="/m/Content/page/images/p-logo.png" alt="" />
+                </div>
+            </div>
+            <h3>恭喜发财，大吉大利!</h3>
+            <div id="hb_money" class="num">
+                <span>88</span>元
+            </div>
+            <div class="packet-copy">
+            </div>
+        </div>
+    </div>
+    <div class="packet-bg" id="j-packet-bg"></div>
+
+    <script type="text/javascript">
+        // 红包查询
+        function showDetail() {
+            var bgObj = document.getElementById("bgDiv");
+            // bgObj.style.width = document.body.offsetWidth + "px";
+            // bgObj.style.height = document.body.offsetHeight + "px";
+
+            var msgObj = document.getElementById("msgDiv");
+            // msgObj.style.marginTop = -75 +  document.documentElement.scrollTop + "px";
+
+            document.getElementById("msgShut").onclick = function () {
+                bgObj.style.display = msgObj.style.display = "none";
+            }
+            msgObj.style.display = bgObj.style.display = "block";
+            // msgDetail.innerHTML=""
+        }
+    </script>
+    <script src="/m/Scripts/page/vendor/zepto.min.js"></script>
+    <script src="/m/Scripts/page/vendor/zepto.touch.min.js"></script>
+    <script src="/m/Scripts/page/lottery.js"></script>
+    <script type="text/javascript">
+        var NowTimeOld = new Date("2018/11/17 02:51:14");
+
+        var startDateTime = new Date("2018/11/17 00:00:00");
+        var endDateTime = new Date("2018/11/17 23:59:59");
+
+
+        var one, two, NowTime, waveTime;
+
+        //倒计时
+        function getROne() {
+            var startDateTime = new Date("2018/05/01 17:44:18");
+
+            var t_s = NowTimeOld.getTime();
+
+            var NowTime = NowTimeOld.setTime(t_s + 1000);
+
+            var t = startDateTime - NowTime;
+
+            if (t <= 0) {
+                window.location.reload();
+                return;
+            }
+
+            var d = Math.floor(t / 1000 / 60 / 60 / 24);
+            var h = Math.floor(t / 1000 / 60 / 60 % 24);
+            var m = Math.floor(t / 1000 / 60 % 60);
+            var s = Math.floor(t / 1000 % 60);
+
+            document.getElementById("t_d").innerHTML = "<em>" + d + "</em>" + "天";
+            document.getElementById("t_h").innerHTML = "<em>" + h + "</em>" + "小时";
+            document.getElementById("t_m").innerHTML = "<em>" + m + "</em>" + "分";
+            document.getElementById("t_s").innerHTML = "<em>" + s + "</em>" + "秒";
+        }
+
+        //进行中
+        function getRTimeTwo() {
+
+            var t_s = NowTimeOld.getTime();
+
+            var NowTime = NowTimeOld.setTime(t_s + 1000);
+
+            var t = waveTime - NowTime;
+
+            if (t <= 0) {
+                clearInterval(two);
+                ajaxLottery();
+                return;
+            }
+
+            var d = Math.floor(t / 1000 / 60 / 60 / 24);
+            var h = Math.floor(t / 1000 / 60 / 60 % 24);
+            var m = Math.floor(t / 1000 / 60 % 60);
+            var s = Math.floor(t / 1000 % 60);
+
+            var h = d * 24 + h;
+            document.getElementById("t_d_2").innerHTML = "<em>" + d + "</em>" + "天";
+            document.getElementById("t_h_2").innerHTML = "<em>" + h + "</em>" + "小时";
+            document.getElementById("t_m_2").innerHTML = "<em>" + m + "</em>" + "分";
+            document.getElementById("t_s_2").innerHTML = "<em>" + s + "</em>" + "秒";
+        }
+
+        //下一波倒计时
+        function getRTimeOne() {
+            var t_s = NowTimeOld.getTime();
+            var NowTime = NowTimeOld.setTime(t_s + 1000);
+            var t = startDateTime - NowTime;
+
+            if (t <= 0) {
+                clearInterval(one);
+                ajaxLottery();
+                return;
+            }
+
+            var d = Math.floor(t / 1000 / 60 / 60 / 24);
+            var h = Math.floor(t / 1000 / 60 / 60 % 24);
+            var m = Math.floor(t / 1000 / 60 % 60);
+            var s = Math.floor(t / 1000 % 60);
+
+
+            document.getElementById("t_d_3").innerHTML = "<em>" + d + "</em>" + "天";
+            document.getElementById("t_h_3").innerHTML = "<em>" + h + "</em>" + "小时";
+            document.getElementById("t_m_3").innerHTML = "<em>" + m + "</em>" + "分";
+            document.getElementById("t_s_3").innerHTML = "<em>" + s + "</em>" + "秒";
+        }
+
+        ajaxLottery();</script>
+
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            $(".winners").slide({
+                type: "slide",
+                mainCell: "#winners",
+                effect: "topMarquee",
+                autoPlay: true,
+                interTime: 100,
+                vis: 5
+            });
+            $("body").on("click", "[data-key='logn']", function () {
+                $('#j-logn').show();
+                $('#j-packet-bg').show();
+            });
+
+            $('[data-key="lognClose"]').click(function () {
+                $('#j-logn').hide();
+                $('#j-packet-bg').hide();
+            });
+
+            //红包
+            $('[data-key="packet"]').click(function () {
+                checkUser();
+
+            });
+
+            $('.packet-close').click(function () {
+                $('#j-packet').hide();
+                $('#j-packet-bg').hide();
+                $('.packet-2').hide();
+                $('.packet-1').show();
+                isClick = false;
+            })
+
+
+        });
+
+        function loginClick() {
+            $("#username").val($("#username2").val());
+            checkUser();
+            $('#j-logn').hide();
+            $('#j-packet-bg').hide();
+        }
+
+        function showMsg(msgText) {
+            alert(msgText);
+
+        }
+
+        // 红包查询
+        function showDetail() {
+            var bgObj = document.getElementById("bgDiv");
+
+            var msgObj = document.getElementById("msgDiv");
+
+            document.getElementById("msgShut").onclick = function () {
+                bgObj.style.display = msgObj.style.display = "none";
+            }
+            msgObj.style.display = bgObj.style.display = "block";
+        }
+
+        //下红包
+        function hby() {
+            var wh = $(window).height();
+            var f = $(document).width();
+            var e = Math.random() * f - 100;//
+            var o = 0.5 + Math.random();//
+            var fon = 10 + Math.random() * 30;//
+            var l = e - 100 + 200 * Math.random();//
+            var k = 2000 + 5000 * Math.random();
+            var html;
+            switch (Math.floor(Math.random() * 3 + 1)) {
+                case 1:
+                    html = "<div data-key='logn' class='snow snow-1'><div>";
+                    break;
+                case 2:
+                    html = "<div data-key='logn' class='snow snow-2'><div>";
+                    break;
+                case 3:
+                    html = "<div data-key='logn' class='snow snow-3'><div>";
+                    break;
+
+            }
+
+            $(html).clone().appendTo("body").css({
+                left: e + "px",
+                opacity: o,
+                "font-size": fon,
+            }).animate({
+                top: (wh * 1) + "px",
+                left: l + "px",
+                opacity: 0.1,
+            }, k, "linear", function () {
+                $(this).remove();
+            })
+        }
+    </script>
+</body>
+
+</html>
+
+
+</body>
+</html>
